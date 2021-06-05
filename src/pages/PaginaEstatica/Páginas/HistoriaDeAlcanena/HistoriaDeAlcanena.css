@@ -1,0 +1,25 @@
+/*
+  Coloque aqui os estilos para a página estática, o estilo dos componentes partilhados é feito no seu próprio ficheiro CSS
+*/
+
+.history-text {
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 5rem 0 2rem 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.1rem;
+  text-align: left;
+  cursor: text;
+  border-bottom: 1px solid #7a7a7a;
+}
+
+.history-paragraph {
+  padding: 0 0 1rem 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .history-text {
+    padding: 3rem 0 3rem 0;
+    width: 85vw;
+  }
+}

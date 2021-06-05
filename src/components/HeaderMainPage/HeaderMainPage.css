@@ -1,0 +1,61 @@
+/* Página Inicial - Hero Header */
+
+.main-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../images/headers/pagina-inicial-header.jpg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  position: relative;
+  z-index: 0; /* para estar acima do titulo */
+}
+
+.main-hero-content {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: default;
+  z-index: -1; /* para estar abaixo do componente auth*/
+}
+
+.main-hero-title {
+  margin: 0 0 1rem 0;
+  font-size: 4.75rem;
+  font-weight: 100;
+}
+
+.main-hero-content span {
+  font-size: 2rem;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+}
+
+.main-hero-content span:hover {
+  color: var(--CorPrincipal);
+  cursor: pointer;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 650px) {
+  .main-hero-title {
+    font-size: 3.5rem;
+  }
+
+  .main-hero-content span {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .main-hero-title {
+    font-size: 3rem;
+  }
+}

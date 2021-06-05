@@ -1,0 +1,134 @@
+.category-suggestions-container {
+  text-align: left;
+  margin-left: 3rem;
+}
+.category-suggestions-container-title {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.8rem;
+}
+.category-suggestions-image {
+  width: 18rem;
+  height: 11.25rem;
+}
+.category-suggestions-overlay-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18rem;
+  height: 11.25rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1.3rem;
+  opacity: 0; /* opacity 0 para não aparecer e somente aparecer quando o utilizador
+    colocar o rato sobre a imagem, display: none não funcionou neste caso */
+  position: absolute; /* absolute para não mover os outros elementos*/
+  /*translateY para sobrepor o texto e o fundo à imagem */
+  transform: translateY(-11.5rem);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+.category-suggestions-overlay-text:hover {
+  opacity: 1;
+}
+.category-suggestions-item h2 {
+  margin: 0.1rem 0 0 0;
+  font-size: 1.6rem;
+}
+.category-suggestions-item h2:hover {
+  color: #000;
+}
+.category-suggestions-description {
+  width: 18rem;
+  margin: 0.2rem 0 0.8rem 0;
+}
+
+/* Media Queries*/
+
+@media screen and (max-width: 1392px) {
+  .category-suggestions-container {
+    width: 100%;
+    transform: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .category-suggestions-container-title {
+    font-size: 2.3rem;
+    margin: 1.6rem;
+  }
+  .category-suggestions-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .category-suggestions-item {
+    padding: 2rem 3rem 0 3rem;
+  }
+  .category-suggestions-item:first-of-type {
+    border-right: 1px solid #7a7a7a;
+  }
+  .category-suggestions-description {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 870px) {
+  .category-suggestions-container-title {
+    font-size: 1.9rem;
+    margin: 1.6rem;
+  }
+  .category-suggestions-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .category-suggestions-item {
+    padding: 2rem 1rem 0 1rem;
+  }
+}
+@media screen and (max-width: 713px) {
+  .category-suggestions-items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .category-suggestions-container {
+    text-align: left;
+  }
+  .category-suggestions-container-title {
+    width: 21rem;
+    margin: 1.6rem auto 1.6rem auto;
+  }
+  .category-suggestions-item:first-of-type {
+    border-right: none;
+  }
+  .category-suggestions-item {
+    padding: 0 0rem 0 0rem;
+  }
+  .category-suggestions-image {
+    width: 21rem;
+    height: 13.125rem;
+  }
+  .category-suggestions-overlay-text {
+    width: 21rem;
+    height: 13.125rem;
+    transform: translateY(-13.38rem);
+  }
+}
+@media screen and (max-width: 400px) {
+  .category-suggestions-container-title {
+    width: 90vw;
+    font-size: 1.5rem;
+  }
+  .category-suggestions-image {
+    width: 90vw;
+    height: auto;
+  }
+  .category-suggestions-overlay-text {
+    display: none;
+  }
+  .category-suggestions-description {
+    width: 90vw;
+    font-size: 1rem !important;
+  }
+}

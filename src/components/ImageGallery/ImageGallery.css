@@ -1,0 +1,29 @@
+/* Image Gallery */
+
+.section-wrapper:last-of-type {
+  padding-bottom: 3rem;
+  border: 0;
+}
+.section-container-image {
+  margin: 5.55rem 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.section-container-image img {
+  width: 26rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.image-gallery-button {
+  transform: translateY(30%);
+}
+
+@media screen and (max-width: 450px) {
+  .section-container-image {
+    margin: 2rem 0 0 0;
+  }
+}

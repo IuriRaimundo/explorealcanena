@@ -1,0 +1,93 @@
+.formulário-inscrições-section {
+  width: 80vw;
+  text-align: left;
+  margin: 4rem auto 4rem auto;
+}
+.formulário {
+  margin: 0 auto;
+}
+.formulário h2 {
+  padding: 0;
+}
+.form-ul {
+  padding: 0;
+  list-style-type: none;
+}
+.form-ul li {
+  padding: 1.7rem 0 1.7rem 0;
+  margin: 0;
+}
+.formulário label {
+  display: block;
+  font-size: 1.4rem;
+}
+.formulário input,
+.formulário select {
+  display: block;
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  margin: 0.4rem 0 0.4rem 0;
+  border: 1px solid #7e7e7e;
+  border-radius: 5px;
+  width: 20rem;
+  height: 2rem;
+}
+.formulário select {
+  height: 3rem;
+}
+.formulário textarea {
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  margin: 0.4rem 0 0.4rem 0;
+  border: 1px solid #7e7e7e;
+  border-radius: 5px;
+  width: 20rem;
+  height: 6rem;
+}
+.formulário input:focus,
+.formulário select:focus,
+.formulário textarea:focus {
+  outline: none;
+}
+#submit-button {
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  background-color: var(--CorPrincipal);
+  color: #fff;
+  font-size: 1.5rem;
+  height: 4rem;
+  padding: 0 1rem 0 1rem;
+  border: none;
+  border-radius: 20px;
+}
+
+/* Alertas do formulário */
+.message-success {
+  background-color: rgba(13, 209, 79, 0.5);
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #15d144;
+  font-size: 1.1rem;
+  text-align: left;
+}
+.message-error {
+  background-color: rgba(145, 48, 48, 0.5);
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #d45148;
+  text-align: left;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 450px) {
+  .formulário input,
+  .formulário select {
+    width: 80vw;
+  }
+  .formulário textarea {
+    width: 80vw;
+  }
+}

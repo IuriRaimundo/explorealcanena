@@ -1,0 +1,69 @@
+.image-gallery {
+  width: 84rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem 0 0 0;
+  margin: 0 auto;
+}
+.image-gallery-image img {
+  padding: 1rem;
+  width: 19rem;
+  height: auto;
+}
+/* Overlay da imagem*/
+.image-gallery-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 19rem;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1.1rem;
+  opacity: 0; /* opacity 0 para não aparecer e somente aparecer quando o utilizador
+  colocar o rato sobre a imagem, display: none não funcionou neste caso */
+  position: absolute; /* absolute para não mover os outros elementos*/
+  /*translate para sobrepor o texto e o fundo à imagem */
+  transform: translate(1rem, -4.2rem);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+/* para aparecer o overlay quando o rato passar sobre a imagem */
+.image-gallery-image:hover .image-gallery-overlay {
+  opacity: 1;
+}
+/* Media Queries*/
+@media screen and (max-width: 1360px) {
+  .image-gallery {
+    width: 64rem;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .image-gallery {
+    width: 42rem;
+  }
+}
+@media screen and (max-width: 690px) {
+  .image-gallery {
+    width: 21rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .image-gallery {
+    width: 90vw;
+  }
+  .image-gallery-image {
+    width: 90vw;
+  }
+  .image-gallery-image img {
+    width: 80vw;
+  }
+  /* desativar overlay em dispositivos móveis */
+  .image-gallery-overlay {
+    display: none;
+  }
+}

@@ -1,0 +1,5 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /sobre-nós
+Disallow: /contacto
+Disallow: /requisitar-alteração

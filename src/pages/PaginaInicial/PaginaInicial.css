@@ -1,0 +1,17 @@
+/* Introdução */
+.introduction {
+  width: 80vw;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  padding: 7rem 0 7rem 0;
+  border-bottom: 1px solid #7a7a7a;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 450px) {
+  .introduction {
+    padding: 3rem 0 3rem 0;
+  }
+}

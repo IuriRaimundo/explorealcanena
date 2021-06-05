@@ -1,0 +1,23 @@
+/* LeafletMap */
+.leaflet-container {
+  height: 20rem;
+  width: var(--Col1Width);
+  z-index: 1;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1250px) {
+  .leaflet-container {
+    --Col1WidthSmall: 40rem;
+    height: 20rem;
+    width: var(--Col1WidthSmall);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .leaflet-container {
+    --Col1WidthSmall: 90vw;
+    height: 13rem;
+    width: var(--Col1WidthSmall);
+  }
+}

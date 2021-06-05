@@ -1,0 +1,32 @@
+.hero-header {
+  height: 20rem;
+  color: #fff;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 10;
+}
+.hero-title {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  font-weight: 100;
+  margin: 0;
+  position: absolute;
+  top: 8.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Media Queries */
+@media screen and (max-width: 650px) {
+  .hero-title {
+    font-size: 2.9rem;
+  }
+  .hero-title {
+    top: 9.2rem;
+  }
+}

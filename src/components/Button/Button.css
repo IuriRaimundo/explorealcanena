@@ -1,0 +1,68 @@
+.button-1:focus,
+.button-2:focus,
+.button-2-no-hover:focus {
+  outline: none;
+}
+
+.button-1 {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--CorPrincipal);
+  color: var(--CorPrincipal);
+  padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+  border-radius: 10px;
+  margin: 1.55rem 0 0 0;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+.button-1:hover {
+  background: var(--CorPrincipal);
+  color: #fff;
+}
+
+.button-2 {
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1rem;
+  background: var(--CorPrincipal);
+  color: #fff;
+
+  padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+  margin: 0 0 0 0;
+  border: 1px solid #fff;
+  border-radius: 10px;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+.button-2:hover {
+  background: #fff;
+  color: var(--CorPrincipal);
+}
+
+.button-2-no-hover {
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1rem;
+  background: var(--CorPrincipal);
+  color: #fff;
+
+  padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+  margin: 0 0 0 0;
+  border: 1px solid #fff;
+  border-radius: 10px;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}

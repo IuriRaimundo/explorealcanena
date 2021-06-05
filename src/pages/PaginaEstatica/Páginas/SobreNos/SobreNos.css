@@ -1,0 +1,91 @@
+.sobre-nós-article {
+  margin-top: 7.8rem;
+}
+.sobre-nós-section h3 {
+  font-weight: 400;
+}
+
+.sobre-nós-section:last-of-type {
+  margin-bottom: 4rem;
+}
+
+.sobre-nós-h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 0 0 4rem 0;
+}
+
+.sobre-nós-p {
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  max-width: 60rem;
+  width: 90vw;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.sobre-nós-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 80vw;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.sobre-nós-flex-item {
+  width: 20rem;
+  padding-bottom: 2rem;
+}
+
+.sobre-nós-flex-item img {
+  height: 6rem;
+  padding: 0 0 0.4rem 0;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+}
+
+.sobre-nós-flex-item img:hover {
+  transform: scale(1.05);
+}
+
+.sobre-nós-flex-item a:hover {
+  /* desativar efeito hover global */
+  color: #000;
+}
+
+.sobre-nós-serviços-h3 {
+  padding-bottom: 4rem;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1000px) {
+  .sobre-nós-flex-item img {
+    animation-name: scaleIcon;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes scaleIcon {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sobre-nós-flex-item {
+    padding-bottom: 5rem;
+  }
+}

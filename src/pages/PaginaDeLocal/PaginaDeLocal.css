@@ -1,0 +1,96 @@
+.item-page-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 4rem 0 0 0;
+}
+
+.left-col-2 {
+  padding-right: 3rem; /* afastar borda */
+  --Col1Width: 50rem; /* largura da coluna 1 */
+  --SlideHeight: 28.1365rem; /* altura para definir os slides do carrossel */
+  width: var(--Col1Width);
+  text-align: left;
+  border-right: 1px solid #7a7a7a;
+}
+.item-page-title {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  text-align: left;
+  font-size: 1.9rem;
+  padding: 0 0 1.3rem 0;
+}
+.item-page-title-state {
+  padding-left: 0.6rem;
+}
+.item-page-title h1 {
+  /* Remover margin automático do H1 */
+  margin: 0;
+}
+.item-page-description {
+  font-size: 1.15rem;
+  padding: 1.5rem 0 1.5rem 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #7a7a7a;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1300px) {
+  /* reduzir o espaço entre o conteúdo e os detalhes */
+  .left-col-2 {
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  /* reduzir o tamanho do conteúdo e distância dos detalhes */
+  .left-col-2 {
+    --Col1WidthSmall: 40rem;
+    width: var(--Col1WidthSmall);
+    padding-right: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  /* reduzir distância dos detalhes */
+  .left-col-2 {
+    --Col1WidthSmall: 40rem;
+    width: var(--Col1WidthSmall);
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  /* mudar o layout */
+  .left-col-2 {
+    --Col1WidthSmall: 90vw; /* só funcionam variáveis declaradas dentro da própria mediaquery */
+    width: var(--Col1WidthSmall);
+    padding: 0;
+    border: none;
+  }
+  .item-page-title {
+    width: var(--Col1WidthSmall);
+    font-size: 1.6rem;
+    padding: 0 0 1rem 0;
+    flex-wrap: wrap;
+  }
+  .item-page-wrapper {
+    margin: 2rem 0 0 0;
+  }
+  .item-page-description {
+    font-size: 1.2rem;
+    padding: 0.8rem 0 0.8rem 0;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .item-page-title {
+    display: block;
+    width: 90vw; /* achei desnecessário a declaração de uma variável para alterar um elemento */
+  }
+  .item-page-title-state {
+    padding-left: 0;
+  }
+}

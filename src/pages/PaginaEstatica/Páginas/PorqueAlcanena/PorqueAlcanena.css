@@ -1,0 +1,27 @@
+/*
+  Coloque aqui os estilos para a página estática, o estilo dos componentes partilhados é feito no seu próprio ficheiro CSS
+*/
+
+.porque-alcanena-article {
+  max-width: 70rem;
+  margin: 0 auto;
+  border-bottom: 1px solid #7a7a7a;
+  padding: 0 0 6.8rem 0;
+}
+.porque-alcanena-h1 {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 300;
+  padding: 4rem 0 4rem 0;
+}
+.porque-alcanena-paragraph {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+@media screen and (max-width: 650px) {
+  .porque-alcanena-h1 {
+    font-size: 2rem;
+    padding: 2.3rem 0 2.3rem 0;
+  }
+}

@@ -1,0 +1,46 @@
+.Evento8DeMaio-article {
+  text-align: left;
+  width: 70vw;
+  margin: 4rem auto 4rem auto;
+  line-height: 1.6rem;
+}
+
+.Evento8DeMaio-article h1 {
+  font-size: 2.5rem;
+  line-height: normal;
+}
+
+.Evento8DeMaio-content {
+  display: flex;
+}
+.Evento8DeMaio-article img {
+  margin: 1rem 2rem 1rem 0;
+}
+
+.Evento8DeMaio-article p {
+  margin: 2rem 0 2rem 0;
+  font-size: 1.15rem;
+}
+
+.Evento8DeMaio-article a {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1500px) {
+  .Evento8DeMaio-article,
+  .Evento8DeMaio-article img {
+    width: 90vw;
+  }
+  .Evento8DeMaio-article img {
+    margin: 0;
+  }
+  .Evento8DeMaio-article h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Evento8DeMaio-content {
+    display: block;
+  }
+}

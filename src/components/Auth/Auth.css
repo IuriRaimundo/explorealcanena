@@ -1,0 +1,190 @@
+.auth-overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2000; /* colocar o componente auth acima de todos os outros*/
+}
+.auth-wrapper {
+  position: fixed;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 30rem;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+.auth-wrapper * {
+  position: relative;
+  z-index: 100;
+  color: #000;
+}
+.auth-open {
+  opacity: 1;
+  pointer-events: all;
+}
+.auth-closed {
+  pointer-events: none;
+  opacity: 0;
+}
+#auth-close-icon {
+  /*
+    Como a propriedade stroke no svg foi definida como current
+    temos de definir essa propriedade com a cor que desejamos escolher
+  */
+  stroke: #ffffff;
+  cursor: pointer;
+  width: 1.4rem;
+  display: block;
+  position: absolute;
+  transform: translate(29.9rem, -5.9rem); /* Posicionar botão fora do formulário*/
+}
+
+.auth-navigation {
+  border-bottom: 0.7px solid #7e7e7e;
+  margin: 0 1rem 0 1rem;
+}
+.auth-navigation button {
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 0.7rem;
+  margin: 0.4rem;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+.auth-navigation button:hover {
+  background-color: #d2d2d2;
+}
+
+.auth-form-ul {
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+.auth-form-ul li,
+.auth-form-ul h2 {
+  margin: 1rem 1rem 0 1rem;
+}
+.auth-form-ul label {
+  display: block; /* Colocar label sobre o campo*/
+  font-size: 1.3rem;
+}
+
+.auth-form-ul input {
+  display: block;
+  font-family: inherit;
+  font-size: 1.4rem;
+  padding: 0.3rem;
+  margin: 0.4rem 0 0.4rem 0;
+  border: 1px solid #7e7e7e;
+  border-radius: 5px;
+  width: 20rem;
+  height: 1.5rem;
+}
+
+.auth-form-ul input:focus {
+  outline: none;
+}
+
+.auth-form-ul button {
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  background-color: var(--CorPrincipal);
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 100%;
+  margin: 0.7rem 0 0 0;
+  padding: 0.3rem 0 0.3rem 0;
+}
+
+/* Alertas do formulário */
+.auth-message-success {
+  background-color: rgba(13, 209, 79, 0.5);
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #15d144;
+  font-size: 1.1rem;
+  text-align: left;
+}
+.auth-message-error {
+  background-color: rgba(145, 48, 48, 0.5);
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #d45148;
+  text-align: left;
+}
+.auth-message-warning {
+  background-color: rgba(224, 183, 34, 0.548);
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #615a0a;
+  text-align: left;
+}
+
+.auth-form-link {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--CorPrincipal);
+}
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  .auth-wrapper {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+  }
+  .auth-navigation {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .auth-navigation button {
+    border: none;
+    font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 0.7rem;
+    margin: 0.4rem;
+  }
+  #auth-close-icon {
+    position: relative;
+    stroke: #000000;
+    transform: translate(0, 0);
+    width: 2rem;
+    margin: 0 0.3rem 0 0.6rem;
+  }
+  .auth-form-ul input {
+    display: block;
+    font-family: inherit;
+    font-size: 1.4rem;
+    padding: 0.3rem;
+    margin: 0.4rem 0 0.4rem 0;
+    border: 1px solid #7e7e7e;
+    border-radius: 5px;
+    width: 86vw;
+    max-width: 20rem;
+    height: 1.5rem;
+  }
+}
