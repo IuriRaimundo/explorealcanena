@@ -95,13 +95,13 @@ const truncateText = (windowWidth, string) => {
     }
   } else if (windowWidth < 1000) {
     if (string.length > 200) {
-      return string.substring(0, 200) + '...';
+      return string.substring(0, 190) + '...';
     } else {
       return string;
     }
   } else if (windowWidth > 1000) {
     if (string.length > 300) {
-      return string.substring(0, 300) + '...';
+      return string.substring(0, 280) + '...';
     } else {
       return string;
     }

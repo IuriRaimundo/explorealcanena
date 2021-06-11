@@ -17,6 +17,17 @@ html {
   scroll-behavior: smooth;
   cursor: default;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+::-webkit-scrollbar-thumb {
+  background: #b0b0b0;
+  border-radius: 13px;
+}
 p {
   margin: 0;
 }

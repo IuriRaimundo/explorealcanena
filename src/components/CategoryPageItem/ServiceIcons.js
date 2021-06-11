@@ -14,7 +14,9 @@ function ServiceIcons({ services }) {
     const iconsToDisplay = parseIcon(services);
     return (
       <span>
-        {iconsToDisplay.map((icon) => {
+        {iconsToDisplay.map((icon, index) => {
+          // Limitar o número de icones
+          if (index === 4) return null;
           return <img src={icon} alt={icon} className='service-icon' key={icon} />;
         })}
       </span>

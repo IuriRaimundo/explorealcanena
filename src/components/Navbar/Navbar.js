@@ -21,17 +21,12 @@ function Navbar() {
   const { open, setOpen } = useAuth();
   const navRef = useRef();
 
-  useEffect(() => {
-    document.body.addEventListener('click', handleClick);
-    return () => document.body.removeEventListener('click', handleClick);
-  });
-
-  const handleClick = (e) => {
-    // Esta função irá fechar o menu caso ocorra algum clique fora do menu, note que os cliques abaixo do menu também contam.
-    if (navRef.current && !navRef.current.contains(e.target) && menu) {
-      setMenu(false);
-    }
-  };
+  // Desativar scroll caso o menu estava aberto
+  if (menu) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
@@ -147,7 +142,9 @@ function Navbar() {
               color: highlighted === 'nav-sobre-nos' ? '#f45a2b' : null,
             }}
           >
-            <Link to='/sobre-nós'>Sobre nós</Link>
+            <Link to='/sobre-nós' onClick={() => setMenu(false)}>
+              Sobre nós
+            </Link>
           </li>
           <li
             className='navigation-item show-mobile menu-bold'
@@ -156,7 +153,9 @@ function Navbar() {
               color: highlighted === 'nav-contacto' ? '#f45a2b' : null,
             }}
           >
-            <Link to='/sobre-nós/contacto'>Contacto</Link>
+            <Link to='/sobre-nós/contacto' onClick={() => setMenu(false)}>
+              Contacto
+            </Link>
           </li>
         </ul>
         <Search menuState={menu} />

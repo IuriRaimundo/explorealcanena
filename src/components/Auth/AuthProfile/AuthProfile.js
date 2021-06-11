@@ -42,23 +42,25 @@ function AuthProfile({ setScreen }) {
           <p>{currentUser && currentUser.email}</p>
         </div>
         {message && <p className={message.class}>{message.message}</p>}
-        <button
-          id='auth-update-profile-button'
-          onClick={() => {
-            setScreen('update');
-          }}
-        >
-          Alterar perfil
-        </button>
-        <button
-          id='auth-logout-button'
-          onClick={() => {
-            setScreen('login');
-            authOperations.logout();
-          }}
-        >
-          Terminar sessão
-        </button>
+        <div className='auth-profile-buttons'>
+          <button
+            id='auth-update-profile-button'
+            onClick={() => {
+              setScreen('update');
+            }}
+          >
+            Alterar perfil
+          </button>
+          <button
+            id='auth-logout-button'
+            onClick={() => {
+              setScreen('login');
+              authOperations.logout();
+            }}
+          >
+            Terminar sessão
+          </button>
+        </div>
       </div>
     </>
   );

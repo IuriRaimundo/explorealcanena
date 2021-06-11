@@ -1,5 +1,6 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow: /sobre-nós
+Sitemap: https://explorealcanena.web.app/sitemap.xml
 Disallow: /contacto
 Disallow: /requisitar-alteração
+Disallow: /inscreva-o-seu-negócio
+Disallow : /requisitar-alteração

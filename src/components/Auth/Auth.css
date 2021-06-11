@@ -49,7 +49,6 @@
   position: absolute;
   transform: translate(29.9rem, -5.9rem); /* Posicionar botão fora do formulário*/
 }
-
 .auth-navigation {
   border-bottom: 0.7px solid #7e7e7e;
   margin: 0 1rem 0 1rem;
@@ -70,7 +69,6 @@
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
 }
-
 .auth-navigation button:hover {
   background-color: #d2d2d2;
 }
@@ -88,7 +86,6 @@
   display: block; /* Colocar label sobre o campo*/
   font-size: 1.3rem;
 }
-
 .auth-form-ul input {
   display: block;
   font-family: inherit;
@@ -100,11 +97,9 @@
   width: 20rem;
   height: 1.5rem;
 }
-
 .auth-form-ul input:focus {
   outline: none;
 }
-
 .auth-form-ul button {
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
@@ -116,8 +111,12 @@
   width: 100%;
   margin: 0.7rem 0 0 0;
   padding: 0.3rem 0 0.3rem 0;
+  transition: all 0.3s;
 }
-
+.auth-form-ul button:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transform: scale(1.01);
+}
 /* Alertas do formulário */
 .auth-message-success {
   background-color: rgba(13, 209, 79, 0.5);
@@ -141,12 +140,12 @@
   border: 1px solid #615a0a;
   text-align: left;
 }
-
 .auth-form-link {
   cursor: pointer;
   text-decoration: underline;
   color: var(--CorPrincipal);
 }
+
 /* Media Queries */
 @media screen and (max-width: 600px) {
   .auth-wrapper {

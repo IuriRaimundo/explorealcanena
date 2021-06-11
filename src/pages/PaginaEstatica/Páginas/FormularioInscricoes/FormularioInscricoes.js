@@ -9,7 +9,7 @@ function FormularioInscricoes() {
   const [message, setMessage] = useState();
   const [loading, setLoading] = useState();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setMessage('');
 
@@ -19,6 +19,7 @@ function FormularioInscricoes() {
         message: 'É necessário iniciar sessão com uma conta verificada para submeter.',
         class: 'message-error',
       });
+      setTimeout(() => setMessage(), 5000);
       return;
     }
     if (!currentUser.emailVerified) {
@@ -26,6 +27,7 @@ function FormularioInscricoes() {
         message: 'É necessário confirmar o email da sua conta para submeter formulários.',
         class: 'message-error',
       });
+      setTimeout(() => setMessage(), 5000);
       return;
     }
 
@@ -47,7 +49,7 @@ function FormularioInscricoes() {
     // Adicionar informação do formulário para a coleção 'inscricoes'
     try {
       setLoading(true);
-      await firestoreOperations.addDocument('inscricoes', data, docId);
+      firestoreOperations.addDocument('inscricoes', data, docId);
       setMessage({
         message: 'Formulário submetido com sucesso! Iremos lhe contactar por email em breve.',
         class: 'message-success',
@@ -63,6 +65,7 @@ function FormularioInscricoes() {
         class: 'message-error',
       });
     } finally {
+      setTimeout(() => setMessage(), 5000);
       setLoading(false);
     }
   };

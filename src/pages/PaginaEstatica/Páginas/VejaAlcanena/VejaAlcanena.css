@@ -3,11 +3,11 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 1rem 0 0 0;
+  margin: 1rem 0 0 0;
   margin: 0 auto;
 }
 .image-gallery-image img {
-  padding: 1rem;
+  margin: 1rem;
   width: 19rem;
   height: auto;
 }
@@ -43,6 +43,9 @@
   }
 }
 @media screen and (max-width: 1040px) {
+  .image-gallery-overlay {
+    opacity: 1;
+  }
   .image-gallery {
     width: 42rem;
   }
@@ -57,13 +60,13 @@
     width: 90vw;
   }
   .image-gallery-image {
-    width: 90vw;
+    width: 80vw;
   }
   .image-gallery-image img {
     width: 80vw;
   }
-  /* desativar overlay em dispositivos móveis */
   .image-gallery-overlay {
-    display: none;
+    width: 80vw;
+    font-size: 1rem;
   }
 }

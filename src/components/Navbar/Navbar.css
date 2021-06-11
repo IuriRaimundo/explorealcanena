@@ -1,7 +1,6 @@
 .show-mobile {
   display: none;
 }
-
 #logo {
   position: relative;
   display: block;
@@ -14,7 +13,7 @@ nav {
   margin: 0.7rem 0 0 0;
   transform: translateX(0.95rem);
   position: relative;
-  z-index: 2;
+  z-index: 9;
 }
 .nav-menu {
   display: inline-block;
@@ -32,7 +31,6 @@ nav {
   padding: 0.5rem 1rem;
   border-right: 0.75px solid #fff;
 }
-
 .nav-menu li > span {
   cursor: default;
 }
@@ -187,7 +185,6 @@ nav {
     left: calc(var(--OverlayWidth) * -1);
     width: var(--OverlayWidth);
     height: 100%;
-    pointer-events: none; /* para permitir detetar clique fora do menu */
   }
   /* posiciona o menu em área vísivel, quando o menu é aberto esta classe é inserida no elemento */
   .nav-open {

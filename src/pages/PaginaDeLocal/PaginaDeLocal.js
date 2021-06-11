@@ -40,7 +40,12 @@ function PaginaDeLocal({ data }) {
   let isOpen; // Para verificar se o local de tipo 1 está aberto ou fechado
   const categories = selectedPlace.categorias; // Para reduzir a quantidade de código
 
-  if (categories.includes('restaurantes') || categories.includes('cafés') || categories.includes('cafés')) {
+  if (
+    categories.includes('restaurantes') ||
+    categories.includes('cafés') ||
+    categories.includes('cafés') ||
+    categories.includes('alojamento')
+  ) {
     typeOfPlace = 'type1';
     isOpen = isPlaceOpen(selectedPlace.horário);
   } else {

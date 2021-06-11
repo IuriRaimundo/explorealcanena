@@ -15,7 +15,7 @@ function FormularioAlterar() {
     firestoreOperations.getAllPlacesName().then((result) => setPlaces(result));
   }, []);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setMessage('');
 
@@ -25,6 +25,8 @@ function FormularioAlterar() {
         message: 'É necessário iniciar sessão com uma conta verificada para submeter.',
         class: 'message-error',
       });
+      setTimeout(() => setMessage(), 5000);
+
       return;
     }
     if (!currentUser.emailVerified) {
@@ -32,6 +34,8 @@ function FormularioAlterar() {
         message: 'É necessário confirmar o email da sua conta para submeter formulários.',
         class: 'message-error',
       });
+      setTimeout(() => setMessage(), 5000);
+
       return;
     }
     // Conseguir um id único baseado na hora de envio
@@ -48,7 +52,7 @@ function FormularioAlterar() {
     // Adicionar informação do formulário para a coleção 'pedidosDeAlteracao'
     try {
       setLoading(true);
-      await firestoreOperations.addDocument('pedidosDeAlteracao', data, docId);
+      firestoreOperations.addDocument('pedidosDeAlteracao', data, docId);
       setMessage({
         message: 'Formulário submetido com sucesso! Iremos lhe contactar por email em breve.',
         class: 'message-success',
@@ -63,6 +67,7 @@ function FormularioAlterar() {
       });
     } finally {
       setLoading(false);
+      setTimeout(() => setMessage(), 5000);
     }
   };
   return (

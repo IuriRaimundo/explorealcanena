@@ -61,6 +61,11 @@
   padding: 0 1rem 0 1rem;
   border: none;
   border-radius: 20px;
+  transition: all 0.3s;
+}
+#submit-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transform: scale(1.01);
 }
 
 /* Alertas do formulário */

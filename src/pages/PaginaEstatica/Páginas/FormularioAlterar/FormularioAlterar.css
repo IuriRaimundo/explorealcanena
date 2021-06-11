@@ -51,16 +51,10 @@
 .formulário textarea:focus {
   outline: none;
 }
-#submit-button {
-  cursor: pointer;
-  border: none;
-  background-color: var(--CorPrincipal);
-  color: #fff;
-  font-size: 1.5rem;
-  height: 4rem;
-  border-radius: 20px;
+#submit-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transform: scale(1.01);
 }
-
 #submit-button {
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
@@ -71,6 +65,7 @@
   padding: 0 1rem 0 1rem;
   border: none;
   border-radius: 20px;
+  transition: all 0.3s;
 }
 
 /* Alertas do formulário */
