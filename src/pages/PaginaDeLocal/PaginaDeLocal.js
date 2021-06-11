@@ -84,7 +84,11 @@ function PaginaDeLocal({ data }) {
           <Details data={selectedPlace} />
           {
             // Somente locais do tipo 1 têm a aba de serviços
-            typeOfPlace === 'type1' ? <Services services={selectedPlace.serviços} /> : void 0
+            typeOfPlace === 'type1' && selectedPlace.serviços.length !== 0 ? (
+              <Services services={selectedPlace.serviços} />
+            ) : (
+              void 0
+            )
           }
         </div>
       </article>
