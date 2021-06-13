@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 //CSS
 import './Details.css';
 //Icon
@@ -6,6 +6,19 @@ import dropdownIcon from '../../images/icons/dropdown-black.svg';
 
 function Schedule({ icon, data }) {
   const [menu, setMenu] = useState(false);
+
+  useEffect(() => {
+    const scheduleElement = document.getElementById('details-schedule-dropdown');
+    if (menu) {
+      // Conseguir a altura dos elementos filho e definir a altura do dropdwon pelo número de
+      // filhos existente, não foi utilizado height: auto\100%\max-content porque as transições
+      // só funcionam com valores fixos.
+      const childHeight = scheduleElement.childNodes[1].clientHeight;
+      scheduleElement.style.height = `${childHeight * scheduleElement.childNodes.length}px`;
+    } else {
+      scheduleElement.style.height = '0rem';
+    }
+  }, [menu]);
 
   // Referencia para o horário de cada dia
   const week = {
@@ -44,93 +57,90 @@ function Schedule({ icon, data }) {
           />
         </div>
       </div>
-      <ScheduleDropdown data={data} state={menu} />
+      <ScheduleDropdown data={data} />
     </li>
   );
 }
 
-function ScheduleDropdown({ data, state }) {
-  if (state) {
-    return (
-      <>
-        <ul className='details-schedule-dropdown'>
-          <li className='details-schedule-item'>
-            <p>Segunda-feira</p>
-            {data['segunda-feira'] ? (
-              <p>
-                {data['segunda-feira'][0]} - {data['segunda-feira'][1]}
-              </p>
-            ) : (
-              <p style={{ color: '#ac0000' }}>Encerrado</p>
-            )}
-          </li>
-          <li className='details-schedule-item'>
-            <p>Terça-feira</p>
-            {data['terça-feira'] ? (
-              <p>
-                {data['terça-feira'][0]} - {data['terça-feira'][1]}
-              </p>
-            ) : (
-              <p style={{ color: '#ac0000' }}>Encerrado</p>
-            )}
-          </li>
-          <li className='details-schedule-item'>
-            <p>Quarta-feira</p>
-            {data['quarta-feira'] ? (
-              <p>
-                {data['quarta-feira'][0]} - {data['quarta-feira'][1]}
-              </p>
-            ) : (
-              <p style={{ color: '#ac0000' }}>Encerrado</p>
-            )}
-          </li>
-          <li className='details-schedule-item'>
-            <p>Quinta-feira</p>
-            {data['quinta-feira'] ? (
-              <p>
-                {data['quinta-feira'][0]} - {data['quinta-feira'][1]}
-              </p>
-            ) : (
-              <p style={{ color: '#ac0000' }}>Encerrado</p>
-            )}
-          </li>
-          <li className='details-schedule-item'>
-            <p>Sexta-feira</p>
-            {data['sexta-feira'] ? (
-              <p>
-                {data['sexta-feira'][0]} - {data['sexta-feira'][1]}
-              </p>
-            ) : (
-              <p style={{ color: '#ac0000' }}>Encerrado</p>
-            )}
-          </li>
-          <li className='details-schedule-item'>
-            <p>Sábado</p>
-            {data['sábado'] ? (
-              <p>
-                {data['sábado'][0]} - {data['sábado'][1]}
-              </p>
-            ) : (
-              <p style={{ color: '#ac0000' }}>Encerrado</p>
-            )}
-          </li>
-          <li className='details-schedule-item'>
-            <p>Domingo</p>
-            {data['domingo'] ? (
-              <p>
-                {data['domingo'][0]} - {data['domingo'][1]}
-              </p>
-            ) : (
-              <p style={{ color: '#ac0000' }}>Encerrado</p>
-            )}
-          </li>
-        </ul>
-      </>
-    );
-  } else {
-    return null;
-  }
+function ScheduleDropdown({ data }) {
+  return (
+    <>
+      <ul className='details-schedule-dropdown' id='details-schedule-dropdown'>
+        <li className='details-schedule-item'>
+          <p>Segunda-feira</p>
+          {data['segunda-feira'] ? (
+            <p>
+              {data['segunda-feira'][0]} - {data['segunda-feira'][1]}
+            </p>
+          ) : (
+            <p style={{ color: '#ac0000' }}>Encerrado</p>
+          )}
+        </li>
+        <li className='details-schedule-item'>
+          <p>Terça-feira</p>
+          {data['terça-feira'] ? (
+            <p>
+              {data['terça-feira'][0]} - {data['terça-feira'][1]}
+            </p>
+          ) : (
+            <p style={{ color: '#ac0000' }}>Encerrado</p>
+          )}
+        </li>
+        <li className='details-schedule-item'>
+          <p>Quarta-feira</p>
+          {data['quarta-feira'] ? (
+            <p>
+              {data['quarta-feira'][0]} - {data['quarta-feira'][1]}
+            </p>
+          ) : (
+            <p style={{ color: '#ac0000' }}>Encerrado</p>
+          )}
+        </li>
+        <li className='details-schedule-item'>
+          <p>Quinta-feira</p>
+          {data['quinta-feira'] ? (
+            <p>
+              {data['quinta-feira'][0]} - {data['quinta-feira'][1]}
+            </p>
+          ) : (
+            <p style={{ color: '#ac0000' }}>Encerrado</p>
+          )}
+        </li>
+        <li className='details-schedule-item'>
+          <p>Sexta-feira</p>
+          {data['sexta-feira'] ? (
+            <p>
+              {data['sexta-feira'][0]} - {data['sexta-feira'][1]}
+            </p>
+          ) : (
+            <p style={{ color: '#ac0000' }}>Encerrado</p>
+          )}
+        </li>
+        <li className='details-schedule-item'>
+          <p>Sábado</p>
+          {data['sábado'] ? (
+            <p>
+              {data['sábado'][0]} - {data['sábado'][1]}
+            </p>
+          ) : (
+            <p style={{ color: '#ac0000' }}>Encerrado</p>
+          )}
+        </li>
+        <li className='details-schedule-item'>
+          <p>Domingo</p>
+          {data['domingo'] ? (
+            <p>
+              {data['domingo'][0]} - {data['domingo'][1]}
+            </p>
+          ) : (
+            <p style={{ color: '#ac0000' }}>Encerrado</p>
+          )}
+        </li>
+      </ul>
+    </>
+  );
 }
+
 const isPlaceOpen = (data) => {
   // Referencia para o horário de cada dia
   const week = {
@@ -142,6 +152,7 @@ const isPlaceOpen = (data) => {
     5: data['sexta-feira'],
     6: data['sábado'],
   };
+
   // Conseguir dia da semana atual, em número
   const date = new Date().getDay();
   // Aceder à referência correspondente ao dia atual.

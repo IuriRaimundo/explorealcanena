@@ -24,26 +24,31 @@ class Image {
   }
 }
 // Imagens
-const image1 = new Image(image1Import, 'Imagem do rio Alviela', `Praia Fluvial Olhos D'Água`, '/natureza');
-const image2 = new Image(image2Import, 'Janela cársica do Alviela', `Trilho dos Olhos D'Água`, '/natureza');
-const image3 = new Image(image3Import, 'Algar de abatimento do Alviela', `Trilho dos Olhos D'Água`, '/natureza');
+const image1 = new Image(
+  image1Import,
+  'Imagem do rio Alviela',
+  `Praia Fluvial Olhos D'Água`,
+  '/natureza/praia-fluvial-dos-olhos-de-água'
+);
+const image2 = new Image(image2Import, 'Janela cársica do Alviela', `Trilho dos Olhos D'Água`, '/natureza/trilho-alviela');
+const image3 = new Image(image3Import, 'Algar de abatimento do Alviela', `Trilho dos Olhos D'Água`, '/natureza/trilho-alviela');
 const image4 = new Image(
   image4Import,
   'Miradouro dos Depósitos após o pôr do sol',
   'Miradouro do Depóstios',
-  '/jardins-e-miradouros'
+  '/jardins-e-miradouros/miradouro-dos-depósitos'
 );
 const image5 = new Image(
   image5Import,
   'Miradouro Joaquim Ramos Vieira durante o pôr do sol',
   'Miradouro Joaquim Ramos Vieira',
-  '/jardins-e-miradouros'
+  '/jardins-e-miradouros/miradouro-joaquim-ramos-vieira'
 );
 const image6 = new Image(
   image6Import,
   'Miradouro Joaquim Ramos Vieira durante o pôr do sol',
   'Miradouro Joaquim Ramos Vieira',
-  '/jardins-e-miradouros'
+  '/jardins-e-miradouros/miradouro-joaquim-ramos-vieira'
 );
 const image7 = new Image(
   image7Import,
@@ -58,9 +63,14 @@ const image11 = new Image(
   image11Import,
   'Miradouro dos depósitos pôr do sol',
   'Miradouro dos Depósitos',
-  '/jardins-e-miradouros'
+  '/jardins-e-miradouros/miradouro-dos-depósitos'
 );
-const image12 = new Image(image12Import, 'Miradouro dos depósitos', 'Miradouro dos Depósitos', '/jardins-e-miradouros');
+const image12 = new Image(
+  image12Import,
+  'Miradouro dos depósitos',
+  'Miradouro dos Depósitos',
+  '/jardins-e-miradouros/miradouro-dos-depósitos'
+);
 
 const images = [image1, image7, image3, image2, image5, image6, image4, image11, image12, image10, image8, image9];
 

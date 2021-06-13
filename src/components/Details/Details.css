@@ -79,6 +79,8 @@
   transform: rotate(180deg);
 }
 .details-schedule-dropdown {
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
   padding-left: 3rem; /* Para alinhar o horário com o resto do texto dos detalhes, é o valor da largura dos icones e respetivo padding */
 }
 .details-schedule-item {

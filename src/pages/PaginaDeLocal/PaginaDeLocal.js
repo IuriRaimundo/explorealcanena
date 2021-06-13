@@ -16,6 +16,7 @@ import PageNotFound from '../../components/PageNotFound/PageNotFound';
 
 function PaginaDeLocal({ data }) {
   const [imageUrls, setImageUrls] = useState([]);
+  const [showOpenLabel, setShowOpenLabel] = useState();
   const { name } = useParams();
   const selectedPlace = data ? getSelectedPlace(data, name) : null;
 
@@ -30,6 +31,17 @@ function PaginaDeLocal({ data }) {
         .catch((err) => console.log(err));
     }
   }, [name, selectedPlace]);
+
+  // Verificar se o horário existe
+  useEffect(() => {
+    let validSchedule = false;
+    Object.entries(selectedPlace.horário).forEach((entry) => {
+      if (entry[1] !== null) {
+        validSchedule = true;
+      }
+    });
+    setShowOpenLabel(validSchedule);
+  }, [selectedPlace]);
 
   // Se não for existir nenhum local com o nome inserido na url, renderizar o componente PageNotFound
   if (!selectedPlace) {
@@ -58,20 +70,21 @@ function PaginaDeLocal({ data }) {
         <section className='item-page-left-col'>
           <div className='item-page-title'>
             <h1>{selectedPlace.nome}</h1>
-            {typeOfPlace === 'type1' && isOpen ? ( // Verificar se o local é do tipo 1, pois os de tipo 2 não têm horário
+            {showOpenLabel && typeOfPlace === 'type1' && isOpen ? ( // Verificar se o local é do tipo 1, pois os de tipo 2 não têm horário. Os locais de alojamento não têm horário então são excluidos.
               <h1 className='item-page-title-state'>
                 <span>(</span>
                 <span style={{ color: 'green' }}>aberto</span>
                 <span>)</span>
               </h1>
-            ) : typeOfPlace === 'type1' ? (
-              <h1>
-                <span>(</span>
-                <span style={{ color: '#ac0000' }}>fechado</span>
-                <span>)</span>
-              </h1>
             ) : (
-              void 0
+              showOpenLabel &&
+              typeOfPlace === 'type1' && (
+                <h1>
+                  <span>(</span>
+                  <span style={{ color: '#ac0000' }}>fechado</span>
+                  <span>)</span>
+                </h1>
+              )
             )}
           </div>
           <div className='left-col-2'>
