@@ -15,10 +15,10 @@ class Categoria {
 }
 
 const Natureza = new Categoria(
-  '/natureza',
-  'Natureza',
+  '/património-natural',
+  'Património Natural',
   'explorealcanena-natureza.jpg',
-  'ver natureza',
+  'ver património natural',
   'Alcanena tem vários tesouros oferecidos pela natureza à espera para serem visitados.'
 );
 const JardinsMiradouros = new Categoria(
@@ -29,10 +29,10 @@ const JardinsMiradouros = new Categoria(
   'Venha visitar os belos jardins e ver as belas paisagens dos miradouros de Alcanena.'
 );
 const Cultura = new Categoria(
-  '/cultura',
-  'Cultura',
+  '/património-cultural',
+  'Património Cultural',
   'explorealcanena-cultura.jpg',
-  'ver locais de cultura',
+  'ver património cultural',
   'Descubra mais sobre a cultura da região nestes locais.'
 );
 const Restaurantes = new Categoria(
@@ -61,9 +61,9 @@ const Cafés = new Categoria(
 function CategorySuggestions({ currentCategory }) {
   // Este switch irá associar o objeto de categoria à categoria que foi passada ao componente
   const categoryContent = {
-    natureza: Natureza,
+    'património-natural': Natureza,
     'jardins-e-miradouros': JardinsMiradouros,
-    cultura: Cultura,
+    'património-cultural': Cultura,
     restaurantes: Restaurantes,
     pastelarias: Pastelarias,
     cafés: Cafés,

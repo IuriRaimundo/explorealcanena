@@ -44,11 +44,11 @@ function App() {
             <Switch>
               <Route exact path='/' component={PaginaInicial} />
 
-              <Route path='/natureza' component={PaginaDeCategoria} />
+              <Route path='/património-natural' component={PaginaDeCategoria} />
 
               <Route path='/jardins-e-miradouros' component={PaginaDeCategoria} />
 
-              <Route path='/cultura' component={PaginaDeCategoria} />
+              <Route path='/património-cultural' component={PaginaDeCategoria} />
 
               <Route path='/restaurantes' component={PaginaDeCategoria} />
 

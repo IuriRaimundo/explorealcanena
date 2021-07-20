@@ -28,10 +28,20 @@ const image1 = new Image(
   image1Import,
   'Imagem do rio Alviela',
   `Praia Fluvial Olhos D'Água`,
-  '/natureza/praia-fluvial-dos-olhos-de-água'
+  '/património-natural/praia-fluvial-dos-olhos-de-água'
 );
-const image2 = new Image(image2Import, 'Janela cársica do Alviela', `Trilho dos Olhos D'Água`, '/natureza/trilho-alviela');
-const image3 = new Image(image3Import, 'Algar de abatimento do Alviela', `Trilho dos Olhos D'Água`, '/natureza/trilho-alviela');
+const image2 = new Image(
+  image2Import,
+  'Janela cársica do Alviela',
+  `Trilho dos Olhos D'Água`,
+  '/património-natural/trilho-alviela'
+);
+const image3 = new Image(
+  image3Import,
+  'Algar de abatimento do Alviela',
+  `Trilho dos Olhos D'Água`,
+  '/património-natural/trilho-alviela'
+);
 const image4 = new Image(
   image4Import,
   'Miradouro dos Depósitos após o pôr do sol',
@@ -54,10 +64,10 @@ const image7 = new Image(
   image7Import,
   'Praia fluvial dos Olhos De Água, vista da ponte.',
   'Praia Fluvial dos Olhos De Água',
-  '/natureza/praia-fluvial-dos-olhos-de-água'
+  '/património-natural/praia-fluvial-dos-olhos-de-água'
 );
-const image8 = new Image(image8Import, 'Ponte da pedra', 'Ponte da Pedra', '/natureza/ponte-da-pedra');
-const image9 = new Image(image9Import, 'Ponte da pedra', 'Ponte da Pedra', '/natureza/ponte-da-pedra');
+const image8 = new Image(image8Import, 'Ponte da pedra', 'Ponte da Pedra', '/património-natural/ponte-da-pedra');
+const image9 = new Image(image9Import, 'Ponte da pedra', 'Ponte da Pedra', '/património-natural/ponte-da-pedra');
 const image10 = new Image(image10Import, 'Hotel Eurosol Alcanena', 'Hotel Eurosol Alcanena', '/alojamento/hotel-eurosol');
 const image11 = new Image(
   image11Import,

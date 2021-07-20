@@ -87,7 +87,7 @@ function Navbar() {
               O que visitar?
               <img src={dropdown} alt='triangulo de dropdown' className='nav-dropdown-icon hide-mobile' />
             </span>
-            <Dropdown firstItem='Natureza' secondItem='Jardins e Miradouros' thirdItem='Cultura' />
+            <Dropdown firstItem='Património Natural' secondItem='Jardins e Miradouros' thirdItem='Património Cultural' />
           </li>
 
           <li className='navigation-item'>
@@ -115,7 +115,7 @@ function Navbar() {
                 window.location.href = `/alojamento`;
               }}
             >
-              Alojamento
+              Onde dormir?
             </Link>
           </li>
 

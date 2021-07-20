@@ -81,35 +81,24 @@ function HistoriaDeAlcanena() {
         sectionRef={void 0}
         firstItemImage='explorealcanena-natureza.jpg'
         firstItem={{
-          name: 'Natureza',
+          name: 'Património Natural',
           id: 'Natureza',
-          description: (
-            <>
-              Alcanena tem vários tesouros oferecidos pela natureza
-              <br />à espera para serem visitados.
-            </>
-          ),
-          overlayText: 'ver locais de natureza',
+          description: 'Alcanena tem vários tesouros oferecidos pela natureza à espera para serem visitados.',
+          overlayText: 'ver património natural',
         }}
         secondItemImage='explorealcanena-jardins-e-miradouros.jpg'
         secondItem={{
           name: 'Jardins e miradouros',
           id: 'Jardins e miradouros',
-          description: (
-            <>
-              Venha visitar os belos jardins e ver as belas paisagens
-              <br />
-              dos miradouros de Alcanena.
-            </>
-          ),
+          description: 'Venha visitar os belos jardins e ver as belas paisagens dos miradouros de Alcanena.',
           overlayText: 'ver jardins e miradouros',
         }}
         thirdItemImage='explorealcanena-cultura.jpg'
         thirdItem={{
-          name: 'Cultura',
+          name: 'Património Cultural',
           id: 'Cultura',
-          description: <>Descubra mais sobre a cultura da região nestes locais.</>,
-          overlayText: 'ver locais de cultura',
+          description: 'Descubra mais sobre a cultura da região nestes locais.',
+          overlayText: 'ver património cultural',
         }}
       />
       <CategoryContainer

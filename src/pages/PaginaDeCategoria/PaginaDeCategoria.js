@@ -28,9 +28,21 @@ function PaginaDeCategoria() {
         setPlaces(result);
       });
     } else {
-      firestoreOperations.fetchCategoryPlaces(category).then((result) => {
-        setPlaces(result);
-      });
+      // URLs que não correspondem com nomes de categoria
+      const urlExceptions = {
+        'património-natural': 'natureza',
+        'património-cultural': 'cultura',
+      };
+
+      if (urlExceptions[category]) {
+        firestoreOperations.fetchCategoryPlaces(urlExceptions[category]).then((result) => {
+          setPlaces(result);
+        });
+      } else {
+        firestoreOperations.fetchCategoryPlaces(category).then((result) => {
+          setPlaces(result);
+        });
+      }
     }
   }, [category]);
 

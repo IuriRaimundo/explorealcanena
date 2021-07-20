@@ -31,10 +31,10 @@ function PaginaInicial() {
         sectionRef={firstSectionRef}
         firstItemImage='explorealcanena-natureza.jpg'
         firstItem={{
-          name: 'Natureza',
+          name: 'Património Natural',
           id: 'Natureza',
           description: 'Alcanena tem vários tesouros oferecidos pela natureza à espera para serem visitados.',
-          overlayText: 'ver locais de natureza',
+          overlayText: 'ver património natural',
         }}
         secondItemImage='explorealcanena-jardins-e-miradouros.jpg'
         secondItem={{
@@ -45,10 +45,10 @@ function PaginaInicial() {
         }}
         thirdItemImage='explorealcanena-cultura.jpg'
         thirdItem={{
-          name: 'Cultura',
+          name: 'Património Cultural',
           id: 'Cultura',
           description: 'Descubra mais sobre a cultura da região nestes locais.',
-          overlayText: 'ver locais de cultura',
+          overlayText: 'ver património cultural',
         }}
       />
 

@@ -42,16 +42,16 @@ const getRouteDetails = (route) => {
       title: 'Veja Alcanena',
       backgroundImage: 'alojamento-header.jpg',
     },
-    '/natureza': {
-      title: 'Natureza',
+    '/património-natural': {
+      title: 'Património Natural',
       backgroundImage: 'natureza-header.jpg',
     },
     '/jardins-e-miradouros': {
       title: 'Jardins e Miradouros',
       backgroundImage: 'jardins-e-miradouros-header.jpg',
     },
-    '/cultura': {
-      title: 'Cultura',
+    '/património-cultural': {
+      title: 'Património Cultural',
       backgroundImage: 'cultura-header.jpg',
     },
     '/restaurantes': {
@@ -67,7 +67,7 @@ const getRouteDetails = (route) => {
       backgroundImage: 'cafés-header.jpg',
     },
     '/alojamento': {
-      title: 'Alojamento',
+      title: 'Onde dormir?',
       backgroundImage: 'alojamento-header.jpg',
     },
     '/eventos': {

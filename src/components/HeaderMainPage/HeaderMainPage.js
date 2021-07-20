@@ -20,10 +20,12 @@ function HeaderMainPage({ firstSectionRef, secondSectionRef, thirdSectionRef }) 
         </span>
         ,
         <span id='saboreie' onClick={() => executeScroll(secondSectionRef)}>
+          {' '}
           Saboreie
         </span>
         ,
         <span id='admire' onClick={() => executeScroll(thirdSectionRef)}>
+          {' '}
           Admire
         </span>
       </div>
