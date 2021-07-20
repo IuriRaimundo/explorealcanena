@@ -6,9 +6,9 @@ import { Route } from 'react-router-dom';
 export default (
   <Route>
     <Route path='/' />
-    <Route path='/natureza' />
+    <Route path='/património-natural' />
     <Route path='/jardins-e-miradouros' />
-    <Route path='/cultura' />
+    <Route path='/património-cultural' />
     <Route path='/restaurantes' />
     <Route path='/pastelarias' />
     <Route path='/cafés' />
